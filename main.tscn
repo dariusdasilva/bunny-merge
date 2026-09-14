@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dy6hrma4lpugk"]
+
+[ext_resource type="Script" uid="uid://dq7r6qi3cu65c" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bmda73liqxirr" path="res://ui.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dusin22tud7xk" path="res://bucket.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c2gwf7lctsgl5" path="res://bunnyfolder/bunny_1.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cmfosx5l1xkye" path="res://bunnyfolder/bunny_2.tscn" id="5_7mycd"]
+
+[node name="Main" type="Node2D" unique_id=702480589]
+script = ExtResource("1_1bvp3")
+starting_tiers = Array[PackedScene]([ExtResource("4_lquwl"), ExtResource("5_7mycd")])
+
+[node name="UI" parent="." unique_id=1831932965 instance=ExtResource("1_ig7tw")]
+offset_right = 972.0
+offset_bottom = 1728.0
+
+[node name="Bucket" parent="." unique_id=1978658922 instance=ExtResource("2_0xm2m")]
+
+[node name="DropCooldown" type="Timer" parent="." unique_id=1989266632]
+wait_time = 0.5
+one_shot = true
+
+[node name="GameOverTimer" type="Timer" parent="." unique_id=1675370773]
+wait_time = 0.5
+
+[connection signal="timeout" from="DropCooldown" to="." method="_on_drop_cooldown_timeout"]

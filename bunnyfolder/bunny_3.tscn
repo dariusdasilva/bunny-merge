@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dpek16pdsb01t"]
+
+[ext_resource type="Script" uid="uid://rr0nm6oscjmb" path="res://bunnyfolder/bunnies.gd" id="1_d04i8"]
+[ext_resource type="Texture2D" uid="uid://blvv812ftre2w" path="res://icon.svg" id="2_kwh7e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aueyd"]
+radius = 80.0
+
+[node name="Bunny3" type="RigidBody2D" unique_id=1198446024 groups=["bunnies"]]
+contact_monitor = true
+max_contacts_reported = 6
+script = ExtResource("1_d04i8")
+tier = 2
+
+[node name="Bunny3Sprite" type="Sprite2D" parent="." unique_id=1587522755]
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("2_kwh7e")
+
+[node name="Bunny3Collision" type="CollisionShape2D" parent="." unique_id=1010671965]
+shape = SubResource("CircleShape2D_aueyd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

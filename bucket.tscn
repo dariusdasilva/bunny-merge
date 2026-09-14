@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dusin22tud7xk"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aueyd"]
+bounce = 0.3
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_aueyd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvbsc"]
+size = Vector2(960, 40)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_aueyd"]
+size = Vector2(960, 40)
+orientation = 2
+
+[node name="Bucket" type="Node2D" unique_id=1978658922]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=305681871]
+position = Vector2(486, 1673)
+rotation = -0.00043901138
+physics_material_override = SubResource("PhysicsMaterial_aueyd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1541440025]
+material = SubResource("CanvasItemMaterial_aueyd")
+position = Vector2(1.999176, 2.0008545)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_yvbsc")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Floor/CollisionShape2D" unique_id=977251055]
+position = Vector2(0.04739221, 0.00023893808)
+mesh = SubResource("PlaneMesh_aueyd")
+
+[node name="LeftWall" type="StaticBody2D" parent="." unique_id=631926854]
+position = Vector2(54, 1177)
+rotation = -1.5707964
+physics_material_override = SubResource("PhysicsMaterial_aueyd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=1912754524]
+material = SubResource("CanvasItemMaterial_aueyd")
+position = Vector2(1.999176, 2.0008545)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_yvbsc")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="LeftWall/CollisionShape2D" unique_id=164545454]
+position = Vector2(0.04739221, 0.00023893808)
+mesh = SubResource("PlaneMesh_aueyd")
+
+[node name="RightWall" type="StaticBody2D" parent="." unique_id=2101077841]
+position = Vector2(916, 1180.0001)
+rotation = -1.5707964
+physics_material_override = SubResource("PhysicsMaterial_aueyd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall" unique_id=43990790]
+visibility_layer = 2
+material = SubResource("CanvasItemMaterial_aueyd")
+position = Vector2(1.999176, 2.0008545)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_yvbsc")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="RightWall/CollisionShape2D" unique_id=1324121408]
+position = Vector2(0.04739221, 0.00023893808)
+mesh = SubResource("PlaneMesh_aueyd")
