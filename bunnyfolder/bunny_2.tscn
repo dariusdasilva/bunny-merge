@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://blvv812ftre2w" path="res://icon.svg" id="1_lckdn"]
 [ext_resource type="Script" uid="uid://rr0nm6oscjmb" path="res://bunnyfolder/bunnies.gd" id="1_ojyio"]
-[ext_resource type="PackedScene" uid="uid://dpek16pdsb01t" path="res://bunnyfolder/bunny_3.tscn" id="2_8r88m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_glhj0"]
 radius = 60.0
@@ -12,7 +11,6 @@ contact_monitor = true
 max_contacts_reported = 6
 script = ExtResource("1_ojyio")
 tier = 1
-next_scene = ExtResource("2_8r88m")
 
 [node name="Bunny2Sprite" type="Sprite2D" parent="." unique_id=1587522755]
 scale = Vector2(0.7, 0.7)
